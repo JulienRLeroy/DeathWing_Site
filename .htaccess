@@ -1,0 +1,24 @@
+# Active la réecriture d'url si n'est pas défini dans apache
+RewriteEngine On
+
+# La base où la réecriture doit s'effectuer
+#RewriteBase /
+
+# Variable qui défini le type d'environnement, si non défini dans apache
+#SetEnv ENVIRONMENT = "dev"
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .* - [S=4] #Nombre de règles à vérifier ci-dessous
+RewriteRule ^([\w-]+)/?$                                index.php?p=$1 [L,QSA]
+RewriteRule ^([\w-]+)/([\w-]+)/?$                       index.php?p=$1&c=$2 [L,QSA]
+RewriteRule ^([\w-]+)/([\w-]+)/([\w-]+)/?$              index.php?p=$1&child=$2&action=$3 [L,QSA]
+RewriteRule ^([\w-]+)/([\w-]+)/([\w-]+)/([\w-]+)/?$     index.php?p=$1&child=$2&action=$3&id=$4 [L,QSA]
+
+
+# Prod security Auth
+#
+#AuthUserFile /home/aonyx/www/.htpasswd
+#AuthName "Aonyx Production Restricted Server"
+#AuthType Basic
+#Require valid-user

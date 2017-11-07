@@ -1,0 +1,435 @@
+body {
+	height: 100%;
+	background-color: #1d2124 !important;
+	color: #9d9d9d !important;
+	font-size: 20px;
+	background: url('../img/bg_dw.png');
+	background-position: center top;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+/* HEADER */
+
+.red {
+	background-color: red;
+}
+
+header  {
+	height: auto;
+}
+
+/* NEWS */
+
+.news {
+	border: 5px double #1e1e1e;
+}
+
+.description_news {
+	word-wrap: break-word;
+}
+
+.news_title {
+	
+}
+
+.news_date {
+	
+}
+
+.news_text {
+	
+}
+
+/* SERVERS */
+
+.servers {
+	border: 5px double #1e1e1e;
+}
+/* BODY */
+
+.index_cadre {
+	min-height: 310px !important;
+}
+
+#body {
+	padding: 5px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.conteneur  { 	
+	margin-bottom: 8%;
+	margin-top: 8%;
+}
+
+.conteneur_logo {
+	text-align: center;
+	margin-bottom: 8%;
+	margin-top: 8%;
+}
+
+.cadre {
+	background-color: #181818;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+/* MENU CADRE */
+
+.nav_cadre ul li {
+	display: inline;
+	list-style: non;
+}
+
+/* PAGES */
+
+.contenu {
+	padding: 15px;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	margin-bottom: 10px; 
+	margin-top: 10px;
+}
+
+/* COMPTE */
+
+.option_acc {
+	background-color: #222;
+	padding: 20px !important;
+	margin-bottom: 5px !important;
+}
+
+.option_acc:hover {
+	color: white !important;
+}
+
+.panel_acc {
+	margin-bottom: 20px;
+}
+
+.btn_acc {
+	background-color: #222;
+	padding: 10px !important;
+}
+
+.btn_acc:hover {
+	color: white !important;
+}
+
+/* REGISTER / LOGIN */
+
+.cadre_register_login {
+	min-height: 350px !important;
+	border: 1px solid white;
+}
+
+.cadre_register_login_bottom {
+	position: absolute !important;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* AUTRES */
+
+.cadre_pages {
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right;
+}
+
+.error {
+	color: red;
+}
+
+.max {
+	min-width: 100% !important;
+}
+
+.nolist {
+	list-style: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.nopadding {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.navbar-inverse {
+	background:rgba(0,0,0, 0.2) !important;
+}
+
+.glyphicon-user {
+	margin-right: 5px;
+}
+
+.glyphicon-log-in {
+	margin-right: 5px;
+}
+
+/* COMPTE */
+
+.option_compte {
+	padding: 10px;
+	background-color:rgba(0,0,0,0.6);
+	margin-bottom: 5px;
+}
+
+/* BOUTIQUE */
+
+.item_shop {	
+	background-color: rgba(0,0,0,0.2);
+	padding-top: 15px;
+	margin-bottom: 5px;
+	border-radius: 4px;
+}
+
+.item_shop_name {
+	line-height: 56px;
+}
+
+.item_shop_name_pad {
+	padding-bottom: 10px;
+}
+
+.item_shop_price {
+	height: 50px;
+	line-height: 50px;
+	border-top: 2px solid #080808;
+}
+
+.item_shop_price input {
+	line-height: normal !important;
+}
+
+.img_shop {
+	max-height: 56px !important;
+}
+
+
+.confirm_buy {
+	text-align: center;
+	line-height: 50px !important;
+	height: 50px !important;
+	max-height: 50px !important;
+}
+
+/* PANIER */
+
+.panier_attente {
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.panier_valid {
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+/* CODEX */
+
+.counter_navbar {
+	background: none !important;
+	border: none !important;
+}
+ 
+.option_codex {
+	background-color: #222;
+	padding: 10px !important;
+	margin-bottom: 5px !important;
+}
+
+.menu_codex {
+	margin-bottom: 2%;
+}
+
+.pages_codex {
+	box-shadow: 0px 0px 3px #89281C; 
+	border-radius: 2px;
+	background: rgba(0,0,0,.3);
+	min-height: 30px !important;
+	max-height: auto;
+	line-height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.pages_codex ul li {
+	display: inline-block;
+	list-style: none;
+	padding-right: 3px;
+}
+
+.range_codex {
+	min-height: 320px !important;
+	height: 320px !important;
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+.defaut_codex {
+	padding: 15px;
+}
+
+.see_more{
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.see_more ul li {
+	list-style: none;
+}
+
+.cadre_codex {
+	box-shadow: 0px 0px 3px #89281C; 
+	border-radius: 2px;
+	background: rgba(0,0,0,.3);
+}
+
+.cadre_img_codex {
+	border: 3px solid #EFD807;
+}
+
+.scrollbar_left {
+	text-align: left;
+	height: 80px;
+	overflow-y: scroll;
+	direction:rtl;	
+}
+
+.img_codex {
+	height: 150px !important;
+}
+
+.scrollbar_right {
+	float: left;
+	height: 80px;
+	overflow-y: scroll;
+}
+
+#scroll_codex::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 5px;	
+}
+
+#scroll_codex::-webkit-scrollbar {
+	width: 5px;
+}
+
+#scroll_codex::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
+
+/* BUGTRACKER */
+
+.bugtracker {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.btn_nav {
+	text-align: center;
+}
+
+.bugtracker_textarea {
+	height: 100px !important;
+	resize:none;
+}
+
+/* QUEST */
+
+#general_quest {
+	min-height: 250px !important;
+}
+
+#reward_quest {
+	min-height: 250px !important;
+}
+
+.img_quest {
+	margin-top: -10px;
+}
+
+.cadre_quest {
+	background: rgba(0,0,0,.3);
+	margin-bottom: 1%;
+}
+
+.inside_quest {
+	background: rgba(0,0,0,.3);
+}
+
+.title_quest {
+	margin-bottom: 1%;
+	font-size: 20px;
+}
+
+/* ID */
+
+#mdp {
+	display: none;
+}
+
+#email {
+	display: none;
+}
+
+#characters {
+	display: none;
+}
+
+#characters ul li {
+	list-style: none;
+}
+
+#characters li {
+	border: 1px solid white;
+	height: auto;
+}
+
+#parrain {
+	display: none;
+}
+
+/* HACK BOOTSTRAP */
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	vertical-align: middle !important;
+}
+
+.alert-danger {
+	background-color: #222 !important;
+	border-color: transparent !important;
+}
+
+.alert-success {
+	background-color: #222 !important;
+	border-color: transparent !important;
+}
+
+.glyphicon-remove {
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.btn {
+	outline: none !important;
+}
