@@ -45,54 +45,56 @@
 
 <div class="col-md-12 cadre_pages bugtracker">	
 	<div class="container-fluid">
-		<div class="col-md-12 center">
-			<label>
-				<h3>Report de Bug</h3>
-			</label>
-		</div>
-		
-		<div class="col-md-12 center nopadding">
-			<div class="col-md-6 nopadding">
+		<form method="post" action="./action/bugtracker.php">
+			<div class="col-md-12 center">
+				<label>
+					<h3>Report de Bug</h3>
+				</label>
+			</div>
+			
+			<div class="col-md-12 center nopadding">
+				<div class="col-md-6 nopadding">
+					<div class="col-md-12 nopadding">
+						<label>Importance</label>
+					</div>
+					<div class="col-md-12 nopadding form-group">
+						<select name="importance">
+							<option value="1">Normal</option>
+							<option value="2">Moyenne</option>
+							<option value="3">Prioritaire</option>
+							<option value="4">Urgente</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6 nopadding">
+					<div class="col-md-12 nopadding">
+						<label>Categorie</label>
+					</div>
+					<div class="col-md-12 nopadding form-group">
+						<select name="cat">
+							<option value="1">Item</option>
+							<option value="2">Quest</option>
+							<option value="3">Creature</option>
+							<option value="4">Sort</option>
+							<option value="5">Autres</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-12 form-group nopadding">
 				<div class="col-md-12 nopadding">
-					<label>Importance</label>
+					<label>Description</label>
 				</div>
-				<div class="col-md-12 nopadding form-group">
-					<select>
-						<option>Normal</option>
-						<option>Moyenne</option>
-						<option>Prioritaire</option>
-						<option>Urgente</option>
-					</select>
-				</div>
-			</div>
-			<div class="col-md-6 nopadding">
 				<div class="col-md-12 nopadding">
-					<label>Categorie</label>
-				</div>
-				<div class="col-md-12 nopadding form-group">
-					<select>
-						<option>Item</option>
-						<option>Quest</option>
-						<option>Creature</option>
-						<option>Sort</option>
-						<option>Autres</option>
-					</select>
-				</div>
+					<textarea name="descript_bug" class="form-control bugtracker_textarea" rows="5" placeholder="Soyez le plus précis possible dans la description du bug"></textarea>
+				</div>	
 			</div>
-		</div>
-		
-		<div class="col-md-12 form-group nopadding">
-			<div class="col-md-12 nopadding">
-				<label>Description</label>
+			
+			<div class="col-md-12 center">
+				<input type="submit" value="Valider" name="bugtrackersubmit">
 			</div>
-			<div class="col-md-12 nopadding">
-				<textarea class="form-control bugtracker_textarea" rows="5" placeholder="Soyez le plus précis possible dans la description du bug"></textarea>
-			</div>	
-		</div>
-		
-		<div class="col-md-12 center">
-			<input type="submit" value="Valider">
-		</div>
+		</form>
 	</div>
 </div>
 

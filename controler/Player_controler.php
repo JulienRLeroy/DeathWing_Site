@@ -125,16 +125,22 @@
 					
 					foreach($tableau as $infos) {
 						
-
-						$total_gold = $infos['money'];
-						$po = floor($total_gold / 10000);
-						$pa = floor(($total_gold - ($po."0000")) / 100);
-						$pc = explode(".",$total_gold / 100)[1];
-
-						$infos['money'] = 
-						$po."<img src='./front/img/icon/money/gold.png' height='10px'> ".
-						$pa."<img src='./front/img/icon/money/silver.png' height='10px'> ".
-						$pc. "<img src='./front/img/icon/money/copper.png' height='10px'> ";
+						if($infos['money'] == 0) {
+							
+							$infos['money'] = "0";
+							
+						} else {
+							
+							$total_gold = $infos['money'];
+							$po = floor($total_gold / 10000);
+							$pa = substr(substr($total_gold, 0, -2), -2) == "" ? "0" : substr(substr($total_gold, 0, -2), -2);
+							$pc = substr($total_gold, -2);
+							
+							$infos['money'] = 
+							$po."<img src='./front/img/icon/money/gold.png' height='10px'> ".
+							$pa."<img src='./front/img/icon/money/silver.png' height='10px'> ".
+							$pc. "<img src='./front/img/icon/money/copper.png' height='10px'> ";
+						}
 						
 						switch($infos['class']) {
 							case 1:  // WARRIOR
