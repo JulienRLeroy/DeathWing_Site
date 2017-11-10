@@ -128,8 +128,14 @@
 								}
 							}
 							else {
-									include("include/news.php");
-									include("include/servers.php");
+							?>
+								<div class="col-md-9">
+									<?php include("include/news.php"); ?>
+								</div>
+								<div class="col-md-3">
+									<?php include("include/servers.php"); ?>
+								</div>
+							<?php
 							}
 						?>
 					</div>

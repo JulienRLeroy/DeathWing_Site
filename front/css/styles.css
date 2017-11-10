@@ -23,6 +23,7 @@ header  {
 
 .news {
 	border: 5px double #1e1e1e;
+	margin-bottom: 20px;
 }
 
 .description_news {
