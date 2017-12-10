@@ -1,8 +1,8 @@
 <?php 
 	class DB {
 		
-		private $login = "Kess";
-		private $mdp = "kess62880";
+		private $login = "localhost";
+		private $mdp = "localhost";
 		
 		public function ReturnAuth() {
 			try {
