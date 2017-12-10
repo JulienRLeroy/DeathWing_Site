@@ -1,5 +1,7 @@
 <?php
 
+NotLogged();
+
 ?>
 
 <div class="col-md-12 cadre_pages btn_nav">
@@ -16,7 +18,7 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Description</th>
+					<th>Titre</th>
 					<th>Categorie</th>
 					<th>Importance</th>
 					<th>Etat</th>
@@ -24,17 +26,17 @@
 				</tr>
 			</thead>
 		<?php 
-			$tableau = $methodBugtracker->getBugtrackerEnCours();
+			$tableau = $methodPlayer->getBugtrackerEnCours();
 			foreach($tableau as $ligne) {
 		?>
 				<tbody>
 					<tr>
 						<th><?php echo $ligne['id']; ?></th>
-						<th><?php echo $ligne['description']; ?></th>
+						<th><?php echo $ligne['titre']; ?></th>
 						<th><?php echo $ligne['cat']; ?></th>
 						<th><?php echo $ligne['importance']; ?></th>
 						<th><?php echo $ligne['etat']; ?></th>
-						<th><?php echo $ligne['user']; ?></th>
+						<th>
 					</tr>
 				</tbody>
 		<?php
@@ -82,12 +84,23 @@
 				</div>
 			</div>
 			
-			<div class="col-md-12 form-group nopadding">
+			<div class="col-md-12">
+				<div class="center">
+					<div class="col-md-12">
+						<label>Titre</label>
+					</div>
+					<div class="col-md-12">					
+						<input type="text" class="input_title_bt"  maxlength="30" required name="titre" placeholder="Soyez précis">
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-12 form-group nopadding"> 
 				<div class="col-md-12 nopadding">
 					<label>Description</label>
 				</div>
 				<div class="col-md-12 nopadding">
-					<textarea name="descript_bug" class="form-control bugtracker_textarea" rows="5" placeholder="Soyez le plus précis possible dans la description du bug"></textarea>
+					<textarea name="descript_bug" required class="form-control bugtracker_textarea" rows="5" placeholder="Soyez le plus précis possible dans la description du bug"></textarea>
 				</div>	
 			</div>
 			
@@ -101,6 +114,7 @@
 <?php
 
 ?>
+
 <!--
 
 CATEROGIE 

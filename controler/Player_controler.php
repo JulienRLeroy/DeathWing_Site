@@ -87,9 +87,35 @@
 			   return false;
 			}
 			
-			public function getPlayerOnline($faction) {
+			public function getPlayerOnlineFun($faction) {
 				
 				$req = $this->_BDD->ReturnChar()->query("SELECT race FROM characters WHERE online='1'");
+				$cptA =0;
+				$cptH =0;
+				$cptH == $cptA;
+
+				while($co = $req->fetch())
+				{
+					if(($co["race"] == "1") ||($co["race"] =="3" ) || ($co["race"] =="4") || ($co["race"] =="7") || ($co["race"] =="11") || ($co["race"] =="22")) {
+						$cptA++;
+					} else {
+						$cptH++;
+					}
+				}
+
+				if($faction == "h") {
+					return $cptH;
+				} elseif($faction == "a") {
+					return $cptA;
+				} else {
+					$total = $cptA+$cptH;
+					return $total;
+				}
+			}
+			
+			public function getPlayerOnlinePvP($faction) {
+				
+				$req = $this->_BDD->ReturnCharPvP()->query("SELECT race FROM characters WHERE online='1'");
 				$cptA =0;
 				$cptH =0;
 				$cptH == $cptA;
@@ -283,6 +309,52 @@
 						</div>";
 					return $tmp;
 				}
+			}
+			
+			public function getBugtrackerEnCours() {
+		
+					$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_bugtracker WHERE etat='0'");
+					$tableau = $req->fetchAll();
+					return $tableau;
+					
+					if($req){
+					
+						return true;
+					} 
+			   
+				return false;
+			}	
+			
+			public function getBugtrackerFix() {
+		
+					$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_bugtracker WHERE etat='1'");
+					$tableau = $req->fetchAll();
+					return $tableau;
+					
+					if($req){
+					
+						return true;
+					} 
+			   
+					return false;
+			}	
+			
+			public function AddBugTracker($id, $titre,$descript_bug, $cat, $importance) {
+				
+			   $id = htmlentities($this->_BDD->ReturnAuth()->quote($id)); 
+			   $titre = htmlentities($this->_BDD->ReturnAuth()->quote($titre));
+			   $descript_bug = htmlentities($this->_BDD->ReturnAuth()->quote($descript_bug));
+			   $importance = htmlentities($this->_BDD->ReturnAuth()->quote($importance));
+			   $cat = htmlentities($this->_BDD->ReturnAuth()->quote($cat));
+				
+				$req = $this->_BDD->ReturnSite()->query("INSERT INTO module_bugtracker SET user=".$id.", titre=".$titre.", description=".$descript_bug.", cat=".$cat.", importance=".$importance.", etat=0");
+					
+				if($req){
+					
+				   return true;
+			    } 
+			   
+			   return false;
 			}
 		
         }

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
@@ -11,14 +11,11 @@
 	include_once "controler/Creature_controler.php";
 	include_once "controler/Quest_controler.php";
 	include_once "controler/Boutique_controler.php";
-	include_once "controler/Bugtracker_controler.php";
 	$methodPlayer = new Player_controler();
 	$methodCreature = new Creature_controler();
 	$methodQuest = new Quest_controler();
 	$methodBoutique = new Boutique_controler();
-	$methodBugtracker = new Bugtracker_controler	();
 	session_start();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -88,7 +85,6 @@
 							<?php 
 								if(!IsLogged()) 
 								{ 
-
 								}
 								else 
 								{
@@ -150,4 +146,3 @@
 		</footer>
 	</body>
 </html>
-

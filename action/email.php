@@ -1,9 +1,7 @@
 <?php
 
-include_once "../controler/Player_controler.php";
-include_once "../class/connect_db.php";
-include_once "../class/player.php";
-session_start();
+include_once "../action/include.php";
+
 
 if(isset($_POST['SetNewsEmail'])){
         

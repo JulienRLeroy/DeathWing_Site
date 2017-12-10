@@ -12,23 +12,31 @@
 				$this->_BDD = new DB();
 			}
 			
+			
+			public function getServers() {
+				
+					$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_servers ORDER by id");
+					$tableau = $req->fetchAll();
+					return $tableau;
+			}
+			
 			public function getBoutique() {
 		
-					$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique ORDER by id");
+					$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique WHERE servers=".$_GET['s']);
 					$tableau = $req->fetchAll();
 					return $tableau;
 			}
 				
 			public function getInfosBoutiqueCodex() {
 							
-				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_produit WHERE type_cat=".$_GET['cat']);
+				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_produit WHERE servers=".$_GET['s']." AND type_cat=".$_GET['cat']);
 				$tableau = $req->fetchAll();
 				return $tableau;
 			} 
 			
 			public function getProduitBoutique() {
 							
-				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_produit WHERE id_item=".$_GET['item']);
+				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_produit WHERE servers=".$_GET['s']." AND id_item=".$_GET['item']);
 				$tableau = $req->fetchAll();
 				return $tableau;
 			} 

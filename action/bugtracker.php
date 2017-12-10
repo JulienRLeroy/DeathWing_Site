@@ -1,36 +1,54 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-include_once "../controler/Bugtracker_controler.php";
-include_once "../class/connect_db.php";
-include_once "../class/player.php";
-session_start();
+
+include_once "../action/include.php";
+ 
 
 if(isset($_POST['bugtrackersubmit'])) {
         
         $id = $_SESSION['user']->getId();
+		$titre = $_POST['titre'];
         $descript_bug = $_POST['descript_bug'];
-		$importance = $_POST['importance'];
-		$cat = $_POST['cat'];
+		$importance = intval($_POST['importance']);
+		$cat = intval($_POST['cat']);
         
         if(empty($descript_bug))
         {
            $_SESSION['erreur'] = "Veuillez renseigner la description du bug";
 		   header("Location: ../?p=bugtracker");
 		   
-        } else if ($importance != 1 || 2 || 3 || 4) {
+        }  else if (empty($titre)) {
 			
-			$_SESSION['erreur'] = "Ce n'est pas bien de vouloir truhander";
-		    header("Location: ../?p=bugtracker");
+		   $_SESSION['erreur'] = "Veuillez renseigner un titre";
+		   header("Location: ../?p=bugtracker");
 			
-		} else if ($cat != 1 || 2 || 3 || 4 || 5) {
+		} else if(strlen($titre) >= 31) { 
 			
-			$_SESSION['erreur'] = "Ce n'est pas bien de vouloir truhander";
-		    header("Location: ../?p=bugtracker");
+		   $_SESSION['erreur'] = "La taille de votre titre est trop grande ";
+		   header("Location: ../?p=bugtracker");
+			
+		} else if($importance > 4 || $importance < 1) {
+			
+			$_SESSION['erreur'] = "Ce n'est pas bien de vouloir truander";
+            header("Location: ../?p=bugtracker");
+			
+		} else if($cat > 5 || $cat < 1) {
+			
+			$_SESSION['erreur'] = "Ce n'est pas bien de vouloir truander 2";
+            header("Location: ../?p=bugtracker");
 			
 		} else {
-			$_SESSION['valide'] = "Report de bug envoyé, merci pour votre intérêt porté au serveur";
+			
+			$methodPlayer = new Player_controler();
+            if($methodPlayer->AddBugTracker($id, $titre, $descript_bug, $cat, $importance)) {
+                
+                $_SESSION['valide'] = "Report de bug envoyé, merci pour votre intérêt porté au serveur";
+                header("Location: ../?p=bugtracker");
+            }
+            else 
+            {
+                $_SESSION['erreur'] = "ERREUR : Veuillez contacter l'administrateur du site";
+                header("Location: ../?p=bugtracker");
+            }
 			
 		}
     }
