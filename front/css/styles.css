@@ -50,6 +50,7 @@ header  {
 
 .servers {
 	border: 5px double #1e1e1e;
+	margin-bottom:5px;
 }
 /* BODY */
 
@@ -451,4 +452,28 @@ footer {
 
 .btn {
 	outline: none !important;
+}
+
+/* ADMIN */
+
+.pages_admin {
+	background: rgba(0,0,0,0.6);
+	min-height: 650px !important;
+	height: auto;
+	margin-top: 80px;
+	
+}
+
+.creature {
+	min-height: 300px !important;
+}
+
+
+
+#who_start_end_quest {
+	display: none;
+}
+
+#create_quest {
+	display: none;
 }

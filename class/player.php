@@ -10,8 +10,9 @@ class Player {
 	private $_ip;  
 	private $_BDD;
 	private $_parrain;
+	private $_rank;
 
-	function __construct($username, $email, $vote, $id, $ip, $parrain) {
+	function __construct($username, $email, $vote, $id, $ip, $parrain, $rank) {
 	    
 		$this->_BDD = new DB();
 		$this->_username = $username;
@@ -20,6 +21,7 @@ class Player {
 		$this->_id = $id;
 		$this->_ip = $ip;
 		$this->_parrain = $parrain;
+		$this->_rank = $rank;
 		
 	}
 

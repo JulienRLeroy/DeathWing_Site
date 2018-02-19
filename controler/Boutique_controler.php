@@ -16,8 +16,13 @@
 			public function getServers() {
 				
 					$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_servers ORDER by id");
-					$tableau = $req->fetchAll();
-					return $tableau;
+					if($req){
+						
+					  $tableau = $req->fetchAll();
+					  return $tableau;
+					} 
+			   
+			   return false;
 			}
 			
 			public function getBoutique() {
@@ -30,15 +35,27 @@
 			public function getInfosBoutiqueCodex() {
 							
 				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_produit WHERE servers=".$_GET['s']." AND type_cat=".$_GET['cat']);
-				$tableau = $req->fetchAll();
-				return $tableau;
+				
+				if($req){
+					
+				  $tableau = $req->fetchAll();
+				  return $tableau;
+			    } 
+			   
+			   return false;
 			} 
 			
 			public function getProduitBoutique() {
 							
 				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_boutique_produit WHERE servers=".$_GET['s']." AND id_item=".$_GET['item']);
-				$tableau = $req->fetchAll();
-				return $tableau;
+				
+				if($req){
+					
+				  $tableau = $req->fetchAll();
+				  return $tableau;
+			    } 
+			   
+			   return false;
 			} 
 
 			public function multiProduit($cat, $item, $id, $quantite = 1) {

@@ -18,9 +18,15 @@
 				
 				if($tab = $req ->fetch()) {
 				   
-					 $_SESSION['user'] = new Player($tab['username'], $tab['email'], $tab['vote'], $tab['id'], $tab['last_ip'], $tab['parrain']); // COPIE DE LA CLASS PLAYER
-					 
-					 return true;
+				   if($tab['rank'] != 1) {
+					   $_SESSION['user'] = new Player($tab['username'], $tab['email'], $tab['vote'], $tab['id'], $tab['last_ip'], $tab['parrain'], $tab['rank']); // COPIE DE LA CLASS PLAYER
+					   return true;
+				   } else {
+						$_SESSION['admin'] = new Player($tab['username'], $tab['email'], $tab['vote'], $tab['id'], $tab['last_ip'], $tab['parrain'], $tab['rank']); // COPIE DE LA CLASS PLAYER
+						$_SESSION['user'] = new Player($tab['username'], $tab['email'], $tab['vote'], $tab['id'], $tab['last_ip'], $tab['parrain'], $tab['rank']);
+						return true;
+				   }				   
+						return true;
 				}
 				
 				return false;
@@ -356,6 +362,20 @@
 			   
 			   return false;
 			}
+			
+			public function getInfosBugTracker()
+			{
+				$req = $this->_BDD->ReturnSite()->query("SELECT * FROM module_bugtracker WHERE id=".$_GET['bt']."");
+				
+				if($req){
+					
+				  $tableau = $req->fetchAll();
+				  return $tableau;
+			    } 
+			   
+			   return false;
+
+			} 
 		
         }
 ?>

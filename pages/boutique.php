@@ -2,6 +2,7 @@
 
 NotLogged();
 
+	if(isset($_GET["/"])) { echo"merde";}
 	 if(!isset($_GET['s'])) {
 		 $tableau = $methodBoutique->getServers();
 		foreach($tableau as $servers)

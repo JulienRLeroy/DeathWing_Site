@@ -11,10 +11,12 @@
 	include_once "controler/Creature_controler.php";
 	include_once "controler/Quest_controler.php";
 	include_once "controler/Boutique_controler.php";
+	include_once "controler/Mj_controler.php";
 	$methodPlayer = new Player_controler();
 	$methodCreature = new Creature_controler();
 	$methodQuest = new Quest_controler();
 	$methodBoutique = new Boutique_controler();
+	$methodGm = new Mj_controler();
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -24,6 +26,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="./front/css/styles.css">
 		<link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.css">
+		<script src="./front/js/utils.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
@@ -112,6 +115,7 @@
 							setMessage();
 						?>
 					</div>
+					
 					<div class="col-md-12 contenu">
 						<?php
 						
