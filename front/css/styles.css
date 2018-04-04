@@ -70,9 +70,36 @@ header  {
 }
 
 .conteneur_logo {
+	background-image: url('../img/logo_dw1.png');
+	background-repeat: no-repeat;
+	background-position: center;
 	text-align: center;
-	margin-bottom: 7%;
-	margin-top: 7%;
+	height: 350px;
+	margin-top: 5%;
+}
+
+.conteneur_logo:hover {
+	background-image: url('../img/logo_dw0.png');
+	
+}
+
+.d_header {
+	height: 51px;
+	background-image: url('../img/d_header.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.d_header:hover {
+	background-image: url('../img/d_header_0.png');
+}
+
+.cadre_general {
+	box-shadow: 0px 0px 10px  #ac431f;
+}
+
+.cadre_general:hover {
+	box-shadow: 0px 0px 15px  #ac431f;
 }
 
 .cadre {
@@ -180,6 +207,7 @@ footer {
 
 .navbar-inverse {
 	background:rgba(0,0,0, 0.2) !important;
+	border-left: none !important;
 }
 
 .glyphicon-user {

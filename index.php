@@ -35,7 +35,9 @@
 				<nav class="navbar navbar-inverse">
 					<div class="container-fluid">
 						<div class="navbar-header">
-							<img class="navbar-brand" src="./front/img/d_header.png">
+							<div class="col-md-12 d_header">
+							
+							</div>
 						</div>
 						<ul class="nav navbar-nav">
 							<li class="">
@@ -74,11 +76,11 @@
 			</header>
 			
 			<div class="col-md-12 hidden-xs conteneur_logo nopadding">	
-				<img src="./front/img/logo_dw.png" height="150px"> 
+				
 			</div>
 
 			<div class="container">
-				<div class="col-md-12 col-xs-12 nopadding cadre">
+				<div class="col-md-12 col-xs-12 nopadding cadre cadre_general">
 					<div class="col-md-12">
 						<div class="navbar navbar-inverse">
 							<ul class="nav navbar-nav">
