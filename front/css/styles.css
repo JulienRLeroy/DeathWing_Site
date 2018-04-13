@@ -28,6 +28,7 @@ header  {
 .news {
 	border: 5px double #1e1e1e;
 	margin-bottom: 20px;
+	padding: 10px;
 }
 
 .description_news {
@@ -51,6 +52,7 @@ header  {
 .servers {
 	border: 5px double #1e1e1e;
 	margin-bottom:5px;
+	padding: 10px;
 }
 /* BODY */
 
@@ -159,7 +161,6 @@ footer {
 
 .cadre_register_login {
 	min-height: 350px !important;
-	border: 1px solid white;
 }
 
 .cadre_register_login_bottom {

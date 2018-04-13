@@ -5,7 +5,7 @@ if(IsLogged())
 }
 ?>
 
-<div class="col-md-6">
+<div class="col-md-6 col-xs-6">
 	<div class="col-md-12 cadre_register_login contenu center">
 		<form method="post" action="action/login.php">
 			<div class="container-fluid">
@@ -25,7 +25,7 @@ if(IsLogged())
 		</form>
 	</div>
 </div>
-<div class="col-md-6">
+<div class="col-md-6 col-xs-6">
 	<div class="col-md-12 cadre_register_login contenu center">
 		<form method="post" action="action/login.php">
 			<div class="container-fluid">

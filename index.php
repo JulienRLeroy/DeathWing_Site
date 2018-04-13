@@ -112,13 +112,13 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-12 col-xs-12">
 						<?php
 							setMessage();
 						?>
 					</div>
 					
-					<div class="col-md-12 contenu">
+					<div class="col-md-12 col-xs-12 contenu">
 						<?php
 						
 							if(isset($_GET["p"])) {
@@ -131,10 +131,10 @@
 							}
 							else {
 							?>
-								<div class="col-md-9">
+								<div class="col-md-9 col-xs-9">
 									<?php include("include/news.php"); ?>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-3 col-xs-3">
 									<?php include("include/servers.php"); ?>
 								</div>
 							<?php
