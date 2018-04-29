@@ -26,8 +26,7 @@ header  {
 /* NEWS */
 
 .news {
-	border: 5px double #1e1e1e;
-	margin-bottom: 20px;
+	border-bottom: 5px inset #1e1e1e;
 	padding: 10px;
 }
 
@@ -36,11 +35,11 @@ header  {
 }
 
 .news_title {
-	
+	padding: 5px;
 }
 
 .news_date {
-	
+	padding: 5px;
 }
 
 .news_text {

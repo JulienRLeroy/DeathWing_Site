@@ -78,48 +78,15 @@
 			<div class="col-md-12 hidden-xs conteneur_logo nopadding">	
 				
 			</div>
-
+			
 			<div class="container">
-				<div class="col-md-12 col-xs-12 nopadding cadre cadre_general">
-					<div class="col-md-12">
-						<div class="navbar navbar-inverse">
-							<ul class="nav navbar-nav">
-									<li>
-										<a href="?p=bugtracker">BugTracker</a>
-									</li>
-							<?php 
-								if(!IsLogged()) 
-								{ 
-								}
-								else 
-								{
-							?>
-									<li>
-										<a href="?p=servers">Servers</a>
-									</li>
-									<li>
-										<a href="?p=boutique">Boutique</a>
-									</li>
-									<li>
-										<a href="?p=vote">Voter</a>
-									</li>
-									<li>
-										<a href="?p=codex">Codex</a>
-									</li>
-							<?php
-								}
-							?>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-12 col-xs-12">
-						<?php
-							setMessage();
-						?>
-					</div>
+				<div class="col-md-12 col-xs-12">
+					<div class="col-md-1 col-xs-1">
 					
-					<div class="col-md-12 col-xs-12 contenu">
-						<?php
+					</div>
+					<div class="col-md-8 col-xs-8 ">
+						<div class="col-md-12 col-xs-12 nopadding cadre cadre_general">
+							<?php
 						
 							if(isset($_GET["p"])) {
 								if(file_exists("pages/".$_GET["p"].".php")) {
@@ -130,16 +97,15 @@
 								}
 							}
 							else {
-							?>
-								<div class="col-md-9 col-xs-9">
-									<?php include("include/news.php"); ?>
-								</div>
-								<div class="col-md-3 col-xs-3">
-									<?php include("include/servers.php"); ?>
-								</div>
-							<?php
+								include("include/news.php"); 
 							}
 						?>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-3 ">
+						<div class="col-md-12 col-xs-12 cadre cadre_general">
+							<?php include("include/servers.php"); ?>
+						</div>
 					</div>
 				</div>
 			</div>
